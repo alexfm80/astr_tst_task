@@ -72,6 +72,7 @@ resource "yandex_compute_instance" "vm1" {
     inline = [ 
       "sudo apt update -y",
       "sudo apt install ansible -y",
+      "sudo apt update -y", 
       "sudo apt install git -y",
       "git clone https://github.com/alexfm80/ast-ans.git  ~/ast-ans",
       "sudo ansible-playbook /home/astra/ast-ans/ast_ans.yaml -l localhost"
